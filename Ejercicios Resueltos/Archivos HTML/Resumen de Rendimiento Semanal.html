@@ -3,10 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resumen de Rendimiento Semanal</title>
+    <title>📊 Resumen de Rendimiento Semanal</title>
     <link rel="stylesheet" href="../Archivos CSS/Resumen de Rendimiento Semanal.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
 </head>
 <body>
+    <!-- 
+        Etiquetas semánticas para el Dashboard:
+        <main> para el contenido principal
+        <section> para la sección que contendrá el dashboard
+        <article> para el contenido del dashboard
+        
+        Cada <article> tendrá su propia cabecera y pie de página. Evidentemente
+        no serán <header> y <footer>.
+        
+        Crear un solo dashboard para ver como va quedando.
+    -->
     
+    <main class="contenedor-principal">
+        <h2>📊 Resumen de Culeo Semanal</h2>
+
+        <section class="contenedor-dashboard">
+            <article class="tarjeta">
+                <div class="tarjeta-cabecera">
+                    <h3>Culiadas Diarias</h3>
+                    <span class="trend-positive"> <i class="bi bi-arrow-up"></i> +12%</span>
+                </div>
+
+                <div class="tarjeta-cuerpo">
+                    <span class="valor">12.500</span>
+                    <span class="unidad"><i class="bi bi-currency-euro"></i></span>
+                </div>
+
+                <div class="tarjeta-pie">
+                    <a href="#" class="enlace">Ver reporte de transacciones</a>
+                </div>
+            </article>
+            <!-- Agregar más tarjetas -->
+        </section>
+
+    </main>
+
 </body>
 </html>
