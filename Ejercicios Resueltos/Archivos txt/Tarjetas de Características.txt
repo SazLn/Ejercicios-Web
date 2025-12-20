@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>✔️ Formulario de Envío</title>
+            <script src="https://kit.fontawesome.com/6dbb48a263.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section class="contenedor-principal">
+        <h2>Características</h2>
+        <p>Si quiere saber más acerca de nuestros servicios, seleccione una tarjeta.</p>
+
+        <div class="contenedor-tarjetas">
+            <article class="tarjeta-caracteristica"> <!-- un <article> para cada tarjeta individual -->
+                <i class="fa-brands fa-font-awesome"></i>
+                <h3>Desarrollo Estructurado</h3> 
+                <p>Paso a paso para un desarrollo efectivo y eficiente.</p>
+                <button>Saber más</button>
+            </article> 
+
+            <article class="tarjeta-caracteristica">
+                <i class="fa-solid fa-file"></i>
+                <h3>Archivos y Complementos</h3> 
+                <p>Descargue nuestros archivos personalizados.</p>
+                <button>Saber más</button>
+            </article>
+            
+            <article class="tarjeta-caracteristica">
+                <i class="fa-solid fa-cloud"></i>
+                <h3>Nube</h3> 
+                <p>Documentos, archivos y desarrollos en la nube.</p>
+                <button>Saber más</button>
+            </article>
+
+            <article class="tarjeta-caracteristica"> <!-- Para  añadir un ícono--> </i>
+                <i class="fa-solid fa-truck"></i>
+                <h3>Envíos</h3> 
+                <p>Enviamos nuestros productos a todo el mundo. Pida el suyo y llegará rápidamente.</p>
+                <button>Saber más</button>
+            </article>    
+        </div>
+    </section>
+</body>
+
+</html>
+
+
+body  {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color:  #f4f7f6;
+    box-sizing: border-box;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+
+    background-color: rgb(255, 252, 252);
+}
+
+.contenedor-principal h2 {
+    color: #505050;
+    font-size: 2em;
+    margin: 0;
+}
+
+.contenedor-principal p {
+    color: #333;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contenedor-tarjetas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tarjeta-caracteristica {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 300px;
+    gap: 20px;
+
+    border-radius: 10px;
+    box-shadow: -3px 2px 9px 2px rgba(84,84,84,0.17);
+    padding: 15px;
+    
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-caracteristica:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+.tarjeta-caracteristica i {
+    font-size: 3.7em;
+    color: rgb(50, 137, 218);
+    margin-bottom: 20px;
+}
+
+.tarjeta-caracteristica h3 {
+    margin: 0;
+    font-size: 1.7em;
+    color: rgb(46, 46, 90);
+}
+
+.tarjeta-caracteristica p {
+    font-size: 1.2em;
+    color: rgb(78, 76, 76);
+    margin: 0 0 20px;
+}
+
+button {
+    border-style: none;
+    border-radius: 25px;
+
+    padding: 15px;
+    font-size: 1.1em;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(50, 137, 218);
+    cursor: pointer;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+    background-color: rgb(40, 119, 192);
+}

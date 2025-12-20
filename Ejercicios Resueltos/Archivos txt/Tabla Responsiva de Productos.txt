@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Tabla Responsiva de Productos</title>
+    <script src="https://kit.fontawesome.com/6dbb48a263.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+   <!-- Tabla Responsiva de Productos -->
+
+   <!-- Sección para la tabla -->
+    <section class="contenedor-principal">
+        <h2>Título de la sección</h2>
+
+        <!-- Contenedor de la tabla -->
+         <div class="contenedor-tabla">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Descripción</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">Estado</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <!-- Del encabezado 'Producto' -->
+                    <tr>
+                        <!-- Del encabezado 'Producto' -->
+                        <td>Laptop Ultradelgada</td>
+
+                        <!-- Del encabezado 'Descripción' -->
+                        <td>Potente y ligera, ideal para profesionales en movimiento.</td>
+
+                        <!-- Del encabezado 'Precio' -->
+                        <td>$1,200</td>
+
+                        <!-- Del encabezado 'Estado' -->
+                        <td>En Stock</td>
+                    </tr>
+
+                    <tr>
+                        <td>Auriculares Inalámbricos</td>
+                        <td>Sonido de alta fidelidad con cancelación de ruido activa.</td>
+                        <td>$150</td>
+                        <td>Próximamente</td>
+                    </tr>
+
+                    <tr>
+                        <td>Mouse Ergonómico</td>
+                        <td>Diseñado para la máxima comodidad en largas sesiones de trabajo.</td>
+                        <td>$45</td>
+                        <td>En Stock</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Todos los productos vienen con IVA incluido.</td>
+                    </tr>
+                </tfoot>
+            </table>
+         </div>
+    </section>
+   
+</body>
+
+</html>
+
+------------------------------------------------
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(245, 245, 245);
+    padding: 10px;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos para el contenedor principal <section> */
+.contenedor-principal {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 1px rgba(189, 189, 189, 0.79);
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+}
+
+.contenedor-principal h2 {
+    font-size: 2em;
+    font-weight: bold;
+    color: rgb(13, 37, 56);
+    margin-bottom: 20px;
+}
+
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto;
+}
+
+/* Estilos para la tabla */
+.contenedor-tabla table {
+    border: 1px solid rgb(192, 192, 192);
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.contenedor-principal td, th {
+    border: 1px solid rgb(192, 192, 192);
+    padding: 10px;
+}
+.contenedor-tabla td {
+    text-align: left;
+}
+.contenedor-tabla th {
+    background-color: rgb(27, 127, 221);
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.contenedor-tabla tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+.contenedor-tabla tr:hover {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.contenedor-tabla tfoot td {
+    text-align: center;
+    font-size: 0.9em;
+    color: rgb(112, 112, 112);
+    font-style: italic;
+}

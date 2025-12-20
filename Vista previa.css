@@ -1,0 +1,131 @@
+:root {
+    font-size: 16px; /* Definimos 1rem = 16px base */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 1.5rem; /* Usamos rem para padding */
+    margin: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* ---------------------------------------------------- */
+/* 1. MOBILE-FIRST: Estilos de la Cuadrícula y Tarjetas */
+/* ---------------------------------------------------- */
+
+.dashboard-grid {
+    /* TODO: Aplicar Flexbox para que los ítems se apilen en móvil */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+
+    /* TODO: Aplicar Flexbox para apilar Header, Body, Footer verticalmente */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* --- Componentes Internos --- */
+
+.card-header {
+    /* TODO: Flexbox para alinear título y tendencia horizontalmente, separados */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.metric-title {
+    font-size: 1rem; /* 16px */
+    color: #555;
+    font-weight: 600;
+}
+
+.trend {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+}
+
+.positive {
+    color: #27ae60; /* Verde */
+    background-color: #e6f7ee;
+}
+
+.negative {
+    color: #e74c3c; /* Rojo */
+    background-color: #fbe6e6;
+}
+
+.neutral {
+    color: #f39c12; /* Naranja */
+    background-color: #fff2e0;
+}
+
+.card-body {
+    /* TODO: Flexbox para alinear el valor grande y la unidad. */
+    display: flex;
+    align-items: baseline; /* Alinea por la base de la línea de texto */
+    gap: 0.5rem;
+}
+
+.metric-value {
+    /* Usamos unidades relativas grandes para que resalte */
+    font-size: 3rem; /* 48px */ 
+    font-weight: 700;
+    color: #333;
+    line-height: 1;
+}
+
+.metric-unit {
+    font-size: 1.5rem; /* 24px */
+    color: #777;
+    font-weight: 500;
+}
+
+.card-footer {
+    border-top: 1px solid #eee;
+    padding-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+/* ---------------------------------------------------- */
+/* 2. ADAPTABILIDAD: Escritorio (Cuadrícula de 2 Columnas) */
+/* ---------------------------------------------------- */
+@media (min-width: 768px) {
+    
+    .dashboard-grid {
+        /* TODO: Reorganizar el contenedor para una cuadrícula de 2 columnas */
+        max-width: 900px;
+        flex-direction: row; /* Habilitamos la disposición horizontal */
+        flex-wrap: wrap; /* Permitimos que los ítems bajen de línea */
+    }
+
+    .stat-card {
+        /* TODO: Asegurar que cada tarjeta ocupe el 50% del ancho,
+           teniendo en cuenta el gap entre ellas. */
+        width: calc(50% - 0.5rem); /* 50% menos la mitad del gap */
+        
+        /* Flex-grow y Flex-shrink para consistencia */
+        flex-grow: 1;
+        flex-shrink: 0;
+    }
+    
+    /* Nota: Se necesitaría un ajuste adicional para los gaps si el diseño
+       fuera más complejo, pero esta es la solución más directa. */
+}

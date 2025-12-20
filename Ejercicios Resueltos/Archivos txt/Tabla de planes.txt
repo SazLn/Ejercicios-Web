@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Tabla de planes</title>
+    <script src="https://kit.fontawesome.com/6dbb48a263.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Tabla de planes -->
+     <section class="contenedor-principal">
+        <h2>Comparación de Nuestros Planes</h2>
+
+        <div class="contenedor-tabla">
+            <table class="tabla">
+                <caption>Detalles de las características de nuestros planes de suscripción anual.</caption>
+
+                <thead>
+                    <tr>
+                        <th scope="col">CARACTERÍSTICA</th>
+                        <th scope="col">PLAN BÁSICO</th>
+                        <th scope="col">PLAN ESTÁNDAR</th>
+                        <th scope="col">PLAN PREMIUN</th>
+                        <th scope="col">PLAN EMPRESARIAL</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <th scope="row">ALMACENAMIENTO</th>
+                        <td>10 GB</td>
+                        <td>100 GB</td>
+                        <td>500GB</td>
+                        <td>ilimitado</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">USUARIOS</th>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>20</td>
+                        <td>ilimitado</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">SOPORTE</th>
+                        <td>Email</td>
+                        <td>Email + Chat</td>
+                        <td>prioritario</td>
+                        <td>24/7 dedicado</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">ANCHO DE BANDA</th>
+                        <td>Básico</td>
+                        <td>Estándar</td>
+                        <td>Alto</td>
+                        <td>Ilimitado</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">COPIAS DE SEGURIDAD</th>
+                        <td>Diarias</td>
+                        <td>Diarias</td>
+                        <td>Horarias</td>
+                        <td>Continuas</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">DOMINIO PERSONALIZADO</th>
+                        <td>No</td>
+                        <td>Sí</td>
+                        <td>Sí</td>
+                        <td>Sí</td>
+                    </tr>
+
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Todos los planes incluyen seguridad SSL y actualizaciones automáticas.</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+     </section>
+   
+</body>
+
+</html>
+
+--------------------------------------
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f3f3f3;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    min-height: 100vh;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor-principal {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: -1px -2px 5px 1px rgba(0,0,0,0.11);
+    padding: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.contenedor-principal h2 {
+    font-size: 2em;
+    color: rgb(45, 53, 77);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contenedor-tabla {
+    width: 100%;
+    overflow-x: auto; /* Solo funciona si el contenedor, en este caso [.contenedor-principal], tiene un ancho definido */
+    border: 1px solid rgb(218, 218, 218);
+    border-radius: 10px;
+}
+
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla caption {
+    text-align: left;
+    color: rgb(90, 90, 90);
+    font-style: italic;
+    font-size: 1.2em;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.tabla th, td {
+    border: 1px solid rgb(218, 218, 218);
+    padding: 10px;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.tabla th {
+    background-color: rgb(37, 137, 250);
+    color: white;
+}
+
+.tabla tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.tabla tbody tr:hover {
+    background-color: #e6e5e5;
+    transition: background-color 0.3s ease; 
+}
+
+.tabla tfoot td {
+    text-align: center;
+    font-size: 0.9em;
+    font-style: italic;
+    color: rgb(90, 90, 90);
+    background-color: #f2f2f2;
+}

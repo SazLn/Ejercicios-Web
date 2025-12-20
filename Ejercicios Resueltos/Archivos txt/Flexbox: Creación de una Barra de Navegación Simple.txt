@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Barra de Navegación</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul class="nav_list">
+            <li><a class="nav_link" href="https://www.youtube.com/" target="_blank">Youtube</a></li>
+            <li><a class="nav_link" href="https://www.google.com/?hl=es" target="_blank">Google</a></li>
+            <li><a class="nav_link" href="https://www.facebook.com/?locale=es_LA" target="_blank">Facebook</a></li>
+            <li><a class="nav_link" href="https://x.com/?lang=es" target="_blank">X/Twitter</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
+
+-----------------------------------
+
+body {
+    height: 100vh;
+
+    margin: 0;
+
+    background-color: rgb(231, 230, 229);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.navbar {
+    max-width: 80%;
+    max-height: 80px;
+    background-color: rgba(255, 251, 251, 0.479);
+
+    border-radius: 20px;
+    margin: 10px auto;
+    box-shadow: 1px 13px 5px -10px rgba(110, 110, 110, 0.75);
+
+    padding: 10px;
+}
+
+.nav_list {
+    list-style: none;
+    /* height: 100%; */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: rgb(99, 97, 97);
+    font-weight: bold;
+}
+
+.nav_link:hover {
+    color: rgb(70, 68, 68);
+}

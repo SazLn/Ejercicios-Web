@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>🤑 Tarjeta de producto</title>
+    <script src="https://kit.fontawesome.com/6dbb48a263.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Tarjeta de producto -->
+    <h2>Imágenes Durísimas Store</h2>
+    <!-- contenedor para la galería -->
+    <section class="contenedor-galeria">
+        
+        <article class="tarjeta-producto">
+            <figure class="imagen-tarjeta">
+                <img src="data:image/jpeg;base64,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" alt="Hechicero durísimo">
+            </figure>
+
+            <h3>Mago Skateboard</h3>
+            <span>250$</span>
+            <p>Un mago durísimo practicando skateboard</p>
+
+            <div class="contenedor-botones">
+                <button>Añadir al carrito</button>
+                <a href="#">Ver detalles</a>
+            </div>
+        </article>
+
+        <article class="tarjeta-producto">
+            <figure class="imagen-tarjeta">
+                <img src="https://i.pinimg.com/originals/fb/18/05/fb18055f04d6f55e6300f9eb79a3873e.jpg" alt="Hechicero durísimo">
+            </figure>
+
+            <h3>Christian Animatronic Bale</h3>
+            <span>100$</span>
+            <p>Nada más duro que batman con el Alfredo.</p>
+
+            <div class="contenedor-botones">
+                <button>Añadir al carrito</button>
+                <a href="#">Ver detalles</a>
+            </div>
+        </article>
+
+        <article class="tarjeta-producto">
+            <figure class="imagen-tarjeta">
+                <img src="https://preview.redd.it/hilo-de-im%C3%A1genes-mas-duras-v0-09shirj1sxtb1.jpeg?width=320&crop=smart&auto=webp&s=da6b853cb565ee70d908fe75aae824c1273307ef" alt="Hechicero durísimo">
+            </figure>
+
+            <h3>GustaBorrador</h3>
+            <span>200$</span>
+            <p>Bien duro borrando apóstoles.</p>
+
+            <div class="contenedor-botones">
+                <button>Añadir al carrito</button>
+                <a href="#">Ver detalles</a>
+            </div>
+        </article>
+
+        <article class="tarjeta-producto">
+            <figure class="imagen-tarjeta">
+                <img src="https://preview.redd.it/hilo-de-im%C3%A1genes-mas-duras-v0-xxd6o8l6aztb1.jpeg?width=320&crop=smart&auto=webp&s=d40823d3abeb15156425d1e849bc7a807c2e8657" alt="Hechicero durísimo">
+            </figure>
+
+            <h3>Papeada Bíblica</h3>
+            <span>300$</span>
+            <p>Nada más duro que Jesus papeandose al diablo.</p>
+
+            <div class="contenedor-botones">
+                <button>Añadir al carrito</button>
+                <a href="#">Ver detalles</a>
+            </div>
+        </article>
+    </section>
+</body>
+
+</html>
+
+<!-- Preguntarle a chat gpt cuales etiquetas son las mejores para la semática para cada ejercicio. -->
+
+----------------------------------------------
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 10px;
+    background-color: rgb(243, 243, 243);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* Estilos para el contenedor de la galería */
+.contenedor-galeria {
+    text-align: center;
+    max-width: 70%;
+
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 1px 13px 4px rgba(0,0,0,0.18);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+}
+
+h2 {
+    font-size: 1.7em;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+
+    color: rgb(30, 40, 66);
+}
+
+/* Estilos para la tarjeta de producto */
+.tarjeta-producto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    max-width: 350px;
+
+    border: 1px solid rgb(212, 212, 212);
+    border-radius: 10px;
+    box-shadow: 0px 1px 13px 4px rgba(66, 66, 66, 0.18);
+    padding: 10px;
+
+    transition: transform 0.3s ease;
+}
+.tarjeta-producto:hover {
+    transform: scale(1.05);
+}
+
+/* para la imagen */
+.imagen-tarjeta {
+    width: 100%;
+    height: 200px;
+}
+.imagen-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+/* para el texto de la tarjeta */
+.tarjeta-producto h3 {
+    font-size: 1.3em;
+    color: rgb(30, 40, 66);
+}
+
+.tarjeta-producto span {
+    font-size: 1.2em;
+    color: rgb(30, 40, 66);
+    margin-bottom: 5px;
+}
+
+.tarjeta-producto p {
+    font-size: 1.1em;
+    color: rgb(94, 93, 93);
+    font-style: italic;
+    margin-bottom: 10px;
+    text-wrap: break-word;
+}
+
+.contenedor-botones {
+    display: flex;
+    gap: 15px;
+    justify-content: space-between;
+    min-height: 40px;
+}
+
+/* Para los botones */
+.contenedor-botones button,
+.contenedor-botones a {
+    flex: 1 1;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+
+    font-size: 1.1em;;
+    text-align: center;
+    line-height: 40px;
+    text-decoration: none;
+    min-width: 160px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contenedor-botones button {
+    background-color: rgb(66, 190, 66);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+}
+.contenedor-botones button:hover {
+    background-color: rgb(58, 173, 58);
+}
+
+.contenedor-botones a {
+    background-color: white;
+    color: rgb(66, 190, 66);
+    border: 2px solid rgb(66, 190, 66);
+    font-weight: bold;
+    cursor: pointer
+}
+.contenedor-botones a:hover {
+    background-color: rgb(66, 190, 66);
+    color: white;
+}
+
+/* mediaquery para flexibilidad */
+@media (max-width: 768px) {
+    .contenedor-botones {
+        flex-direction: column;
+    }
+}
+
+
+
+/* Ver como hacer que el enlace tenga el mismo ancho que el botón  y que su texto esté centrado verticalmente*/

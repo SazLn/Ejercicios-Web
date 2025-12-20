@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Tarjeta de Perfil flexible</title>
+
+    <!-- Enlaces para poner íconos des bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Fuentes importadas -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monda:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Tarjeta de perfil responsiva -->
+    <section class="contenedor-section">
+        <h1>Perfil Durísimo</h1>
+        <div class="contenedor-perfil">
+            <figure class="contenedor-fotoPerfil">
+                <img src="https://preview.redd.it/hilo-de-im%C3%A1genes-mas-duras-v0-86sp0zxlfytb1.jpeg?width=320&crop=smart&auto=webp&s=e147ec0911865bcd92bc674f88f766c519de898d" alt="Rata durísima" class="foto-perfil">
+            </figure>
+
+            <div class="contenedor-descripcionPerfil">
+                <h2>El Rata</h2>
+                <p>Rata sicaria durísima, si quieres sicariar al que sea, llámela que le hace la vuelta.</p>
+
+                <ul>
+                    <!-- Usar íconos para las redes sociales, vincular con # -->
+                    <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+                    <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+                    <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+                    <li><a href="#"><i class="bi bi-github"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
+
+-------------------------------------------------------------------------------------------
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ebebeb;
+
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* mobile-first: primero hay que diseñar la página para que sea apta para móviles */
+
+/* Estilos para la sección */
+.contenedor-section {
+    min-width: 360px;
+
+    border-radius: 10px;
+    box-shadow: 0px 1px 9px -2px #0000009a;
+    padding: 15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+/* Estilos para la foto de perfil */
+.contenedor-fotoPerfil {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+
+    border: 3px solid rgba(67, 128, 207, 0.829);
+    box-shadow: 0 0 15px 0 rgba(67, 128, 207, 0.836);
+}
+
+/* Estilos para la lista de íconos */
+.contenedor-descripcionPerfil ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 20px;
+    margin: 0;
+}
+.contenedor-descripcionPerfil li a {
+    font-size: 1.5rem;
+    color: rgb(40, 126, 240);
+}
+
+/* Estilos para el texto */
+.contenedor-descripcionPerfil p {font-size: 1rem;}
+.contenedor-section h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+.contenedor-descripcionPerfil h2 {font-size: 1.65rem;}
+
+/* Reglas at (@media) para anchos de pantalla más cercanos al desktop */
+
+/* Para anchos de pantalla >= 760px o cuando el móvil está en horizontal */
+@media (min-width: 760px), (orientation: landscape) {
+    .contenedor-section {
+        max-width: 600px;
+    }
+    .contenedor-section h1 {
+        margin-bottom: 1.7rem;
+    }
+
+    .contenedor-perfil {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        gap: 25px;
+    }
+
+    .contenedor-descripcionPerfil ul {
+        justify-content: left;
+        align-items: end;
+        margin-top: 20px;
+    }
+}

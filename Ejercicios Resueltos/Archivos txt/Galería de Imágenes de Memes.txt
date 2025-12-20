@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles.css">
+    <title>Galería de Imágenes</title>
+    <script src="https://kit.fontawesome.com/6dbb48a263.js" crossorigin="anonymous"></script>
+</head>
+<!-- Ejercicio de galería de imágenes. -->
+
+<!-- Galería: contenida dentro de un <section>
+     Imágenes: dentro de un <figure>
+     overlay: info que se superpondrá encima de la imágen al hacer hover.     
+-->
+<body>
+    <h2>Galería de Memes</h2>
+    <!-- Contenedor principal de la galería de imágenes -->
+    <section class="contenedor-principal">
+        <figure class="contenedor-imagen">
+            <img src="https://images7.memedroid.com/images/UPLOADED761/64de0ada93a4f.jpeg" alt="Pero no le dí importancia">
+            <div class="overlay">
+                <h3>Pero no le dí importancia</h3>
+                <p>El meme muestra una situación absurda, peligrosa o evidentemente alarmante que alguien debería haber tomado en serio, pero el narrador concluye con la frase “pero no le di importancia”, minimizando de forma ridícula lo que ocurrió.</p>
+            </div>
+        </figure>
+
+        <figure class="contenedor-imagen">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxxgxbmAWz2ZuXL8MEwNHgu_RxOY3Fqaku9A&s" alt="Tralalero Tralala">
+            <div class="overlay">
+                <h3>Tralalero Tralala</h3>
+                <p>“Tralalero Tralala” es un producto de la cultura digital contemporánea: una combinación de absurdismo visual y auditivo, humor hipnótico sin sentido literal, que refleja cómo el caos y la provocación se han convertido en formas dominantes de entretenimiento en las redes.</p>
+            </div>
+        </figure>  
+
+        <figure class="contenedor-imagen">
+            <img src="https://i1.sndcdn.com/artworks-QJw04Iu2hzW2cFnk-zP0Wlg-t500x500.png" alt="Yo no lo descargo porque ya lo tengo">
+            <div class="overlay">
+                <h3>Yo no lo descargo porque ya lo tengo</h3>
+                <p>Este meme es una expresión de humor autodenigrante: declara que no realiza una acción evidente (como descargar música, videos, juegos...) usando una excusa que suena ridícula.</p>
+            </div>
+        </figure>  
+
+        <figure class="contenedor-imagen">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBvgs3Vo1ff89lq_H-Z7NIUIsOAelVJDqcsw&s" alt="Ah Con razón">
+            <div class="overlay">
+                <h3>Ah con razón</h3>
+                <p>Es un meme que se usa de forma irónica para fingir que uno entiende algo obvio o absurdo como si fuera una gran revelación.</p>
+            </div>
+        </figure>  
+    </section>
+</body>
+
+</html>
+
+-----------------------------------------
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: rgb(236, 246, 255);
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Estilos para el contenedor Principal */
+.contenedor-principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+
+    max-width: 1200px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.212);
+}
+
+/* Estilos para las imágenes*/
+.contenedor-imagen {
+    flex: 1 1 300px;
+    min-width: 280px;
+    max-width: 350px;
+    height: 250px;
+    overflow: hidden; /* Para ocultar el desbordamiento del contenido dentro del <figure> */
+    border-radius: 10px;
+    position: relative; /* Para que el <figure> actúe como ancla para sus hijos en el efecto overlay (superposición) */
+}
+
+.contenedor-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; /* 'object-fit' indica cómo debe redimensionarse una <img> o un video respecto a su contenedor */
+    transition: transform 0.3s ease;
+}
+.contenedor-imagen:hover img {
+    transform: scale(1.05);
+}
+
+/* Estilos para el efecto de superposición overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0; /* para que se ubique en la esquina superior izquierda */
+    width: 100%; /* para que ocupe todo el espacio de su contenedor */
+    height: 100%;
+    padding: 20px;
+    color: white;
+    font-size: 1.1em;
+    background-color: rgba(0, 0, 0, 0.637);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    transform: translateY(100%); /* Para ocultar el contenido lo mueve hacia abajo */
+    transition: transform 0.3s ease; /* Transisión para animar la superposición con un hover */;
+}
+.contenedor-imagen:hover .overlay{ /* Al hacer hover al <figure> se muestra el contenido superpuestoo */
+    transform: translateY(0);
+}
+
