@@ -6,7 +6,7 @@
 
 body {
     background-color: #f0f2f5;
-    height: 100vh;
+    min-height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1.5rem;
 }
@@ -75,12 +75,23 @@ h2 {
     padding: 0.2rem 0.4rem;
     border-radius: 0.2rem;
 }
+.tarjeta-cabecera .trend-neutral {
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #f39c12;
+    background-color: #fff2e0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.2rem;
+}
 /* Para el cuerpo de la tarjeta */
 .tarjeta-cuerpo {
     display: flex;
     align-items: baseline;
     gap: 0.1rem;
     /* border-bottom: 1px solid green; No se ve mal */
+}
+.parejas {
+    gap: 0.5rem;
 }
 .tarjeta-cuerpo .valor {
     font-size: 3rem;
@@ -92,6 +103,7 @@ h2 {
     font-size: 1.5rem;
     color: #777;
 }
+
 /* Para el pie de la tarjeta */
 .tarjeta-pie {
     font-size: 0.9rem;
