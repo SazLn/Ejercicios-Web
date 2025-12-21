@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de mierda</title>
+    <link rel="stylesheet" href="../Archivos CSS/Formulario.css">
+</head>
+<body>
+
+<form id="formulario">
+    <h2>Formulario y prueba de apis</h2>
+    <input id="idUsuario" type="text" placeholder="id">
+    <input id="nombre" type="text" placeholder="Nombre">
+    <input id="password" type="password" placeholder="Password">
+
+    <div>
+        <button type="submit">Post</button>
+        <button type="button" onclick="editarUsuario()">Put</button>
+        <button type="button" onclick="eliminarUsuario()">Delete</button>
+    </div>
+</form>
+<script src="js/fetch.js"></script>
+</body>
+</html>
