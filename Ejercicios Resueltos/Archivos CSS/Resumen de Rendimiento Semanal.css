@@ -122,3 +122,16 @@ h2 {
 /* ************** */
 /* DESKTOP */
 /* ************** */
+@media (min-width: 550px) {
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contenedor-dashboard {
+        max-width: 70%;
+    }
+
+}
