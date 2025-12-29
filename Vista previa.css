@@ -1,130 +1,92 @@
-:root {
-    font-size: 16px; /* Definimos 1rem = 16px base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f2f5;
-    padding: 1.5rem; /* Usamos rem para padding */
-}
-
-h2 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 2rem;
-}
-
-/* ---------------------------------------------------- */
-/* 1. MOBILE-FIRST: Estilos de la Cuadrícula y Tarjetas */
-/* ---------------------------------------------------- */
-
-.dashboard-grid {
-    /* TODO: Aplicar Flexbox para que los ítems se apilen en móvil */
+/* Forzamos que el body sea un flex container para empujar el footer */
+.layout-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    max-width: 500px;
-    margin: 0 auto;
+    min-height: 100vh;
 }
 
-.stat-card {
-    background-color: white;
+/* HEADER */
+.header {
+    background-color: #2c3e50;
+    color: white;
     padding: 1.5rem;
-    border-radius: 0.5rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-
-    /* TODO: Aplicar Flexbox para apilar Header, Body, Footer verticalmente */
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Mobile */
     gap: 1rem;
-}
-
-/* --- Componentes Internos --- */
-
-.card-header {
-    /* TODO: Flexbox para alinear título y tendencia horizontalmente, separados */
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.metric-title {
-    font-size: 1rem; /* 16px */
-    color: #555;
-    font-weight: 600;
-}
-
-.trend {
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 0.2rem 0.4rem;
-    border-radius: 0.2rem;
-}
-
-.positive {
-    color: #27ae60; /* Verde */
-    background-color: #e6f7ee;
-}
-
-.negative {
-    color: #e74c3c; /* Rojo */
-    background-color: #fbe6e6;
-}
-
-.neutral {
-    color: #f39c12; /* Naranja */
-    background-color: #fff2e0;
-}
-
-.card-body {
-    /* TODO: Flexbox para alinear el valor grande y la unidad. */
+.nav {
     display: flex;
-    align-items: baseline; /* Alinea por la base de la línea de texto */
-    gap: 0.5rem;
+    gap: 15px;
 }
 
-.metric-value {
-    /* Usamos unidades relativas grandes para que resalte */
-    font-size: 3rem; /* 48px */ 
-    font-weight: 700;
-    color: #333;
-    line-height: 1;
+.nav a {
+    color: white;
+    text-decoration: none;
 }
 
-.metric-unit {
-    font-size: 1.5rem; /* 24px */
-    color: #777;
-    font-weight: 500;
+/* MAIN AREA */
+.main-content {
+    flex: 1; /* Esto hace que el main crezca y empuje al footer al fondo */
+    display: flex;
+    flex-direction: column; /* Mobile */
 }
 
-.card-footer {
-    border-top: 1px solid #eee;
-    padding-top: 0.5rem;
-    font-size: 0.9rem;
+.sidebar {
+    background-color: #ecf0f1;
+    padding: 2rem;
+    border-bottom: 2px solid #bdc3c7;
 }
 
-/* ---------------------------------------------------- */
-/* 2. ADAPTABILIDAD: Escritorio (Cuadrícula de 2 Columnas) */
-/* ---------------------------------------------------- */
-@media (min-width: 768px) {
+.articles {
+    padding: 2rem;
+    background-color: white;
+}
+
+.post {
+    margin-bottom: 2rem;
+    border-left: 4px solid #3498db;
+    padding-left: 1rem;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #34495e;
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+/* ******************** */
+/* DESKTOP MEDIA QUERY  */
+/* ******************** */
+@media (min-width: 800px) {
     
-    .dashboard-grid {
-        /* TODO: Reorganizar el contenedor para una cuadrícula de 2 columnas */
-        max-width: 900px;
-        flex-direction: row; /* Habilitamos la disposición horizontal */
-        flex-wrap: wrap; /* Permitimos que los ítems bajen de línea */
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
     }
 
-    .stat-card {
-        /* TODO: Asegurar que cada tarjeta ocupe el 50% del ancho,
-           teniendo en cuenta el gap entre ellas. */
-        width: calc(50% - 0.5rem); /* 50% menos la mitad del gap */
-        
-        /* Flex-grow y Flex-shrink para consistencia */
-        flex-grow: 1;
-        flex-shrink: 0;
+    .main-content {
+        flex-direction: row; /* Sidebar y Artículos de lado */
     }
-    
-    /* Nota: Se necesitaría un ajuste adicional para los gaps si el diseño
-       fuera más complejo, pero esta es la solución más directa. */
+
+    .sidebar {
+        /* No crece, no se encoge, base de 250px */
+        flex: 0 0 250px; 
+        border-bottom: none;
+        border-right: 2px solid #bdc3c7;
+    }
+
+    .articles {
+        /* Crece para ocupar todo el resto */
+        flex: 1; 
+    }
 }

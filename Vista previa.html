@@ -3,75 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vista previa</title>
+    <title>Layout Estructura Pro</title>
     <link rel="stylesheet" href="Vista previa.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-<body>
-    
-    <main class="dashboard-container">
-        <h2>📊 Resumen de Rendimiento Semanal</h2>
+<body class="layout-container">
 
-        <section class="dashboard-grid">
+    <header class="header">
+        <div class="logo">🚀 DevBlog</div>
+        <nav class="nav">
+            <a href="#">Inicio</a>
+            <a href="#">Cursos</a>
+            <a href="#">Contacto</a>
+        </nav>
+    </header>
 
-            <div class="stat-card">
-                <div class="card-header">
-                    <h3 class="metric-title">Ventas Diarias</h3>
-                    <span class="trend positive"><i class="fas fa-arrow-up"></i> +12%</span>
-                </div>
-                <div class="card-body">
-                    <span class="metric-value">12.500</span>
-                    <span class="metric-unit">€</span>
-                </div>
-                <div class="card-footer">
-                    <a href="#">Ver reporte de transacciones</a>
-                </div>
-            </div>
+    <main class="main-content">
+        <aside class="sidebar">
+            <h3>Categorías</h3>
+            <ul>
+                <li>Diseño Web</li>
+                <li>Flexbox Master</li>
+                <li>Backend</li>
+            </ul>
+        </aside>
 
-            <div class="stat-card">
-                <div class="card-header">
-                    <h3 class="metric-title">Usuarios Activos</h3>
-                    <span class="trend negative"><i class="fas fa-arrow-down"></i> -3%</span>
-                </div>
-                <div class="card-body">
-                    <span class="metric-value">84.1K</span>
-                    <span class="metric-unit">Usuarios</span>
-                </div>
-                <div class="card-footer">
-                    <a href="#">Detalle de sesión</a>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="card-header">
-                    <h3 class="metric-title">Tasa de Conversión</h3>
-                    <span class="trend positive"><i class="fas fa-arrow-up"></i> +0.5%</span>
-                </div>
-                <div class="card-body">
-                    <span class="metric-value">4.7</span>
-                    <span class="metric-unit">%</span>
-                </div>
-                <div class="card-footer">
-                    <a href="#">Optimizar embudo</a>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="card-header">
-                    <h3 class="metric-title">Ingreso Promedio</h3>
-                    <span class="trend neutral"><i class="fas fa-arrows-alt-h"></i> 0%</span>
-                </div>
-                <div class="card-body">
-                    <span class="metric-value">45</span>
-                    <span class="metric-unit">€</span>
-                </div>
-                <div class="card-footer">
-                    <a href="#">Análisis de ticket</a>
-                </div>
-            </div>
-            
+        <section class="articles">
+            <article class="post">
+                <h2>Aprendiendo el shorthand de Flex</h2>
+                <p>El uso de flex: 1 es la clave para layouts dinámicos...</p>
+            </article>
+            <article class="post">
+                <h2>¿Por qué Mobile First?</h2>
+                <p>Diseñar para pantallas pequeñas primero evita código innecesario...</p>
+            </article>
         </section>
     </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Tu Nombre - Hecho con pasión por el código</p>
+    </footer>
 
 </body>
 </html>
