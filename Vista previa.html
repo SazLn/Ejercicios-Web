@@ -3,45 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Estructura Pro</title>
+    <title>Layout Sticky Pro</title>
     <link rel="stylesheet" href="Vista previa.css">
 </head>
-<body class="layout-container">
-
-    <header class="header">
-        <div class="logo">🚀 DevBlog</div>
-        <nav class="nav">
-            <a href="#">Inicio</a>
-            <a href="#">Cursos</a>
-            <a href="#">Contacto</a>
+<body>
+    <header class="header-sticky">
+        <h2>✨ Mi Layout Persistente</h2>
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
         </nav>
     </header>
 
-    <main class="main-content">
-        <aside class="sidebar">
+    <main class="contenedor-main">
+        <aside class="sidebar-sticky">
             <h3>Categorías</h3>
             <ul>
-                <li>Diseño Web</li>
-                <li>Flexbox Master</li>
-                <li>Backend</li>
+                <li><a href="#">Maquetación</a></li>
+                <li><a href="#">Diseño Pro</a></li>
+                <li><a href="#">JavaScript</a></li>
+                <li><a href="#">React</a></li>
             </ul>
         </aside>
 
-        <section class="articles">
+        <section class="contenido-articulos">
             <article class="post">
-                <h2>Aprendiendo el shorthand de Flex</h2>
-                <p>El uso de flex: 1 es la clave para layouts dinámicos...</p>
+                <h3>Artículo 1: La magia del Sticky</h3>
+                <p>Al bajar, verás que el header no se va. ¡Se queda arriba!</p>
+                <div class="relleno">...mucho texto para generar scroll...</div>
             </article>
             <article class="post">
-                <h2>¿Por qué Mobile First?</h2>
-                <p>Diseñar para pantallas pequeñas primero evita código innecesario...</p>
+                <h3>Artículo 2: ¿Qué es el Z-Index?</h3>
+                <p>Es el eje de profundidad. Sin él, el contenido podría pisar al menú.</p>
+                <div class="relleno">...más texto...</div>
             </article>
-        </section>
+            <article class="post">
+                <h3>Artículo 3: Sidebar fija</h3>
+                <p>En desktop, las categorías te acompañan en la lectura.</p>
+                <div class="relleno">...más contenido largo...</div>
+            </article>
+            </section>
     </main>
 
-    <footer class="footer">
-        <p>&copy; 2024 Tu Nombre - Hecho con pasión por el código</p>
+    <footer>
+        <p>© 2025 Master en Sticky & Z-Index</p>
     </footer>
-
 </body>
 </html>

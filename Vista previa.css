@@ -4,89 +4,90 @@
     box-sizing: border-box;
 }
 
-/* Forzamos que el body sea un flex container para empujar el footer */
-.layout-container {
+body {
+    font-family: 'Outfit', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* HEADER */
-.header {
-    background-color: #2c3e50;
+/* --- HEADER STICKY --- */
+.header-sticky {
+    background-color: #1a252f;
     color: white;
-    padding: 1.5rem;
+    padding: 1rem 2rem;
     display: flex;
-    flex-direction: column; /* Mobile */
-    gap: 1rem;
+    justify-content: space-between;
     align-items: center;
+
+    /* CLAVE 1: Lo hacemos pegajoso */
+    position: sticky;
+    top: 0; /* Se pega al borde superior */
+    
+    /* CLAVE 2: Lo ponemos en la capa más alta */
+    z-index: 1000; 
+    
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
 }
 
-.nav {
+.header-sticky ul {
     display: flex;
-    gap: 15px;
+    gap: 1.5rem;
+    list-style: none;
 }
 
-.nav a {
-    color: white;
-    text-decoration: none;
-}
+.header-sticky a { color: white; text-decoration: none; }
 
-/* MAIN AREA */
-.main-content {
-    flex: 1; /* Esto hace que el main crezca y empuje al footer al fondo */
+/* --- MAIN & SIDEBAR --- */
+.contenedor-main {
     display: flex;
-    flex-direction: column; /* Mobile */
+    flex-direction: column; /* Mobile first */
+    flex: 1;
 }
 
-.sidebar {
-    background-color: #ecf0f1;
+.sidebar-sticky {
+    background-color: #f8f9fa;
     padding: 2rem;
-    border-bottom: 2px solid #bdc3c7;
+    border-bottom: 2px solid #dee2e6;
 }
 
-.articles {
-    padding: 2rem;
-    background-color: white;
+/* --- DESKTOP --- */
+@media (min-width: 800px) {
+    .contenedor-main {
+        flex-direction: row;
+    }
+
+    .sidebar-sticky {
+        flex: 0 0 250px;
+        border-bottom: none;
+        border-right: 2px solid #dee2e6;
+
+        /* CLAVE 3: Sidebar pegajosa en Desktop */
+        position: sticky;
+        top: 70px; /* Se pega dejando espacio para el header que mide aprox 60-70px */
+        height: fit-content; /* Importante: que solo ocupe lo que mide su contenido */
+        align-self: flex-start; /* Evita que Flexbox la estire hasta el fondo */
+    }
+
+    .contenido-articulos {
+        flex: 1;
+        padding: 3rem;
+    }
 }
 
 .post {
-    margin-bottom: 2rem;
-    border-left: 4px solid #3498db;
-    padding-left: 1rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
-/* FOOTER */
-.footer {
-    background-color: #34495e;
+.relleno { height: 400px; background: #eee; margin-top: 1rem; border-radius: 4px;}
+
+footer {
+    background: #1a252f;
     color: white;
     text-align: center;
-    padding: 1.5rem;
-}
-
-/* ******************** */
-/* DESKTOP MEDIA QUERY  */
-/* ******************** */
-@media (min-width: 800px) {
-    
-    .header {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    .main-content {
-        flex-direction: row; /* Sidebar y Artículos de lado */
-    }
-
-    .sidebar {
-        /* No crece, no se encoge, base de 250px */
-        flex: 0 0 250px; 
-        border-bottom: none;
-        border-right: 2px solid #bdc3c7;
-    }
-
-    .articles {
-        /* Crece para ocupar todo el resto */
-        flex: 1; 
-    }
+    padding: 2rem;
 }

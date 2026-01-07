@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    /* align-items: center; */
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ------------ */
+/* Mobile-first */
+/* ------------ */
+
+/* Estilos para el header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+
+    background-color: #424242;
+    color: #fff;
+    
+    /* Fijar el header en la parte superior */
+    position: sticky;
+    top: 0;
+    z-index: 100; /* Asegurar que el header esté por encima de los demás elementos */
+}
+header h1 {
+    font-size: 1.5rem;
+}
+/* En esta página las listas no usan viñetas */
+ul {
+    list-style: none;
+}
+header nav ul {
+    display: flex;
+    gap: 1rem;
+}
+header nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilos para el <aside> */
+aside {
+    line-height: 1.5;
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    
+    background-color: #f5f5f5;
+}
+aside ul {
+    list-style: disc;
+    margin-left: 1rem;
+}
+aside ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Estilos para el <main> */
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* Estilos para el <section> */
+section {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+section article {
+    padding: 1rem;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+}
+
+article h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+article p {
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+article .relleno {
+    line-height: 1.5;
+    background-color: #e3e3e3b7;
+    padding: 1rem;
+    
+}
+
+/* Estilos para el <footer> */
+footer {
+    padding: 0.7rem;
+    background-color: #424242;
+    color: #fff;
+    text-align: center;
+}
+
+/* ---------------- */
+/*     Desktop      */
+/* ---------------- */
+
+@media (min-width: 786px) {
+    main {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    aside {
+        width: 20%;
+        max-width: 200px;
+        border-right: 1px solid #d9d9d9;
+    }
+    
+    section {
+        padding-right: 1rem;
+    }
+}
+
