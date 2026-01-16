@@ -1,93 +1,70 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.contenedor-acordeon {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.contenedor-acordeon h2 {
+    text-align: center;
 }
 
-body {
-    font-family: 'Outfit', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+.item-acordeon {
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* --- HEADER STICKY --- */
-.header-sticky {
-    background-color: #1a252f;
-    color: white;
-    padding: 1rem 2rem;
+.header-item {
+    padding: 1.2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-weight: bold;
+    color: #333;
+}
 
-    /* CLAVE 1: Lo hacemos pegajoso */
-    position: sticky;
-    top: 0; /* Se pega al borde superior */
+/* EL ICONO QUE ROTARÁ */
+.icono-flecha {
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* EL CUERPO OCULTO (EL TRUCO) */
+.cuerpo-item {
+    max-height: 0; /* Cerrado */
+    opacity: 0;
+    overflow: hidden;
+    padding: 0 1.2rem; /* El padding lateral se mantiene, pero el vertical no */
     
-    /* CLAVE 2: Lo ponemos en la capa más alta */
-    z-index: 1000; 
-    
-    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    /* Animamos la altura y la opacidad */
+    transition: max-height 0.5s ease-in-out, 
+                opacity 0.3s ease, 
+                padding 0.5s ease;
 }
 
-.header-sticky ul {
-    display: flex;
-    gap: 1.5rem;
-    list-style: none;
+.cuerpo-item p {
+    padding-bottom: 1.2rem;
+    color: #666;
+    line-height: 1.6;
 }
 
-.header-sticky a { color: white; text-decoration: none; }
+/* ++++++++++++++++++++++++++++++ */
+/* ESTADOS HOVER         */
+/* ++++++++++++++++++++++++++++++ */
 
-/* --- MAIN & SIDEBAR --- */
-.contenedor-main {
-    display: flex;
-    flex-direction: column; /* Mobile first */
-    flex: 1;
+.item-acordeon:hover {
+    background-color: #f9f9f9;
 }
 
-.sidebar-sticky {
-    background-color: #f8f9fa;
-    padding: 2rem;
-    border-bottom: 2px solid #dee2e6;
+.item-acordeon:hover .icono-flecha {
+    transform: rotate(90deg);
+    color: #3498db;
 }
 
-/* --- DESKTOP --- */
-@media (min-width: 800px) {
-    .contenedor-main {
-        flex-direction: row;
-    }
-
-    .sidebar-sticky {
-        flex: 0 0 250px;
-        border-bottom: none;
-        border-right: 2px solid #dee2e6;
-
-        /* CLAVE 3: Sidebar pegajosa en Desktop */
-        position: sticky;
-        top: 70px; /* Se pega dejando espacio para el header que mide aprox 60-70px */
-        height: fit-content; /* Importante: que solo ocupe lo que mide su contenido */
-        align-self: flex-start; /* Evita que Flexbox la estire hasta el fondo */
-    }
-
-    .contenido-articulos {
-        flex: 1;
-        padding: 3rem;
-    }
-}
-
-.post {
-    margin-bottom: 4rem;
-    padding: 2rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-
-.relleno { height: 400px; background: #eee; margin-top: 1rem; border-radius: 4px;}
-
-footer {
-    background: #1a252f;
-    color: white;
-    text-align: center;
-    padding: 2rem;
+.item-acordeon:hover .cuerpo-item {
+    max-height: 200px; /* Un valor mayor al contenido real */
+    opacity: 1;
+    padding-top: 0.5rem; /* Le devolvemos un poco de aire arriba */
 }

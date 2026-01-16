@@ -3,53 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Sticky Pro</title>
+    <title>Animaciones con Transition</title>
     <link rel="stylesheet" href="Vista previa.css">
 </head>
 <body>
-    <header class="header-sticky">
-        <h2>✨ Mi Layout Persistente</h2>
-        <nav>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="contenedor-acordeon">
+    <h2>Preguntas Frecuentes</h2>
 
-    <main class="contenedor-main">
-        <aside class="sidebar-sticky">
-            <h3>Categorías</h3>
-            <ul>
-                <li><a href="#">Maquetación</a></li>
-                <li><a href="#">Diseño Pro</a></li>
-                <li><a href="#">JavaScript</a></li>
-                <li><a href="#">React</a></li>
-            </ul>
-        </aside>
+    <div class="item-acordeon">
+        <div class="header-item">
+            <span>¿Cómo funciona el envío?</span>
+            <i class="bi bi-chevron-right icono-flecha"></i>
+        </div>
+        <div class="cuerpo-item">
+            <p>Nuestro envío es galáctico. Llega en menos de 24 horas a cualquier parte del sistema solar usando motores de curvatura.</p>
+        </div>
+    </div>
 
-        <section class="contenido-articulos">
-            <article class="post">
-                <h3>Artículo 1: La magia del Sticky</h3>
-                <p>Al bajar, verás que el header no se va. ¡Se queda arriba!</p>
-                <div class="relleno">...mucho texto para generar scroll...</div>
-            </article>
-            <article class="post">
-                <h3>Artículo 2: ¿Qué es el Z-Index?</h3>
-                <p>Es el eje de profundidad. Sin él, el contenido podría pisar al menú.</p>
-                <div class="relleno">...más texto...</div>
-            </article>
-            <article class="post">
-                <h3>Artículo 3: Sidebar fija</h3>
-                <p>En desktop, las categorías te acompañan en la lectura.</p>
-                <div class="relleno">...más contenido largo...</div>
-            </article>
-            </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Master en Sticky & Z-Index</p>
-    </footer>
+    <div class="item-acordeon">
+        <div class="header-item">
+            <span>¿Es seguro mi pago?</span>
+            <i class="bi bi-chevron-right icono-flecha"></i>
+        </div>
+        <div class="cuerpo-item">
+            <p>Usamos encriptación de 256 bits y validación por ADN interdimensional para asegurar que nadie robe tus créditos.</p>
+        </div>
+    </div>
+</div>
 </body>
 </html>
