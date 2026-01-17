@@ -1,0 +1,66 @@
+html {
+    font-size: 62.5%; /* Truquito para las medidas con rem. */
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Para evitar que se estire y ocupe todo el espacio. */
+    padding: 2.4rem;
+    min-height: 100vh;
+    font-size: 1.6rem;
+
+    background-color: rgb(255, 252, 248);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------- */
+/* Estilos para la tarjeta animada */
+/* ------------------------------- */
+.contenedor-principal {
+    /* En este caso prefiero primero hacer la estética */
+    width: 45.0rem;
+    flex: 0 1 auto;
+    background-color: white;
+    box-shadow: 0px 0px 18px -3px rgba(0, 0, 0, 0.127);
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+.contenedor-principal h2 {
+    margin-top: 1.6rem;
+    text-align: center;
+    margin-bottom: 2.0rem;
+}
+span {
+    display: block;
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 1.6rem;
+    color: rgb(84, 84, 84); 
+    
+}
+p {
+    max-height: 0; 
+    overflow: hidden; /* Oculta el texto */
+    opacity: 0;
+    translate: 0 1.0rem;
+    padding: 0;
+    /* Sin padding aquí porque si no, por alguna razón, muestra el texto. */
+
+    transition: all 0.5s ease-out; /* Hace que el texto tarde un poco más en mostrarse. */
+}
+.contenedor-acordeon:hover {
+    background-color: rgba(128, 128, 128, 0.102);;
+}
+.contenedor-acordeon:hover p {
+    max-height: 30.0rem;
+    padding: 1.6rem;
+    opacity: 1;
+    translate: 0 -1.5rem;
+}
