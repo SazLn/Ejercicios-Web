@@ -1,0 +1,50 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 100vh;
+    background-color: #16213e;
+}
+
+.origen-contenedor {
+    /* Estado inicial */
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #00d0ff1d;
+
+    position: relative; /* Para posicionar la onda expansiva */
+}
+
+/* Onda expansiva */
+.onda {
+    /* Estado inicial */
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    background-color: #00d2ff;
+    /* opacity: 1; */
+
+    position: absolute;
+    z-index: 1; /* Para que se posicione encima del origen. */
+
+    /** Paso 1: definir animación */
+    /* sintaxis simple ->  animation: [nombre] [duración] [temporización] [iteración] */
+    animation: onda 2s linear infinite;
+}
+
+/* Animación con @keyframe */
+@keyframes onda {
+    /** Paso 2: definir estados de animación */
+    from {
+        /* Estado inicial de animación */
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        /* Estado final */
+        opacity: 0;
+        transform: scale(2);
+    }
+}
