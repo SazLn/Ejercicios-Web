@@ -35,16 +35,30 @@ body {
 }
 
 /* Animación con @keyframe */
+
+/* También se pueden definir estados de la animación en momentos específicos.
+    para eso se usan porcentajes.
+*/
 @keyframes onda {
-    /** Paso 2: definir estados de animación */
-    from {
-        /* Estado inicial de animación */
+    0% { /* Estado inicial */
         opacity: 1;
         transform: scale(1);
     }
-    to {
-        /* Estado final */
+
+    /* Se cambia el color a la mitad de la animación */
+    50% {/* Estado a mitad de la animación */
+        background-color: rgb(193, 93, 179);
+        transform: scale(1.5);
+        opacity: 0.5;
+    }
+
+    100% { /* Estado final */
         opacity: 0;
         transform: scale(2);
+        background-color: rgb(29, 221, 29);
     }
 }
+
+/* 
+
+*/
