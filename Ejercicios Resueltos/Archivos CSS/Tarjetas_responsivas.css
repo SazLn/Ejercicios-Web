@@ -1,0 +1,63 @@
+:root {
+    /* Se declaran variables CSS con :root*/
+
+    --color-fondo: #f0f2f5;
+    --color-tarjeta: white;
+    --color-acento: #6c63ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background-color: var(--color-fondo);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.contenedor-grid {
+    display: grid;
+    /* auto-fit crea tantas columnas como quepan.
+        Creo que es mejor usar auto-fit para contenidod e relleno.   
+    */
+    grid-template-columns: repeat(auto-fit, minmax(15.625rem, 1fr));
+
+    /* Las filas se crean cuando ya no hay más espacio y se adaptan al tamaño del contenido. */
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.625rem;
+    padding: 0.625rem;
+    
+    background-color: var(--color-tarjeta);
+    border-radius: 0.625rem;
+    border-bottom: 4px solid transparent;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    /* Animación para :hover */
+    transition: transform 0.2s ease-out,
+                box-shadow 0.2s ease-out,
+                border-color 0.2s ease-out 0.1s;      
+}
+.tarjeta:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+    border-bottom: 4px solid var(--color-acento);
+}
+
+.tarjeta h3 {
+    margin: 0.625rem 0 0.625rem 0;
+}
+
+.icono {
+    font-size: 3rem;
+}
