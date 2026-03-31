@@ -1,0 +1,118 @@
+:root {
+    --color-main: #efefef; 
+    --color-footer-hero : #262634;
+    --color-texto: #1e293b;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.6rem;
+}
+
+                            /* ++++++++++++++ */
+                            /*  MOBILE FISRT  */
+                            /* ++++++++++++++ */
+
+/* TODO: añadir la estética luego de estructurar el grid y el flex y añadir animaciones*/
+
+/* TODO: Añadir un hover al botón del hero para tamaños de escritorio */
+
+.contenedor-principal {
+    height: 100%;
+    min-width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto auto;
+
+    grid-template-areas: 
+        "header"
+        "hero"
+        "main"
+        "aside"
+        "footer"
+    ;
+
+    
+}
+
+/* --------------------------- 
+/    Estilos para el header     
+/------------------------------------------------------------------- */
+header {
+    grid-area: header;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.1rem 0.8rem 1.6rem 0.8rem;
+}
+header a {
+    text-decoration: none;
+}
+header .logo {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--color-texto);
+}
+header ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 0.5rem;
+
+    font-size: 1.4rem;
+}
+ul a {
+    color: rgb(75, 75, 75);
+}
+
+
+/* --------------------------- 
+/    Estilos para el hero-section     
+/------------------------------------------------------------------- */
+.hero-section {
+    grid-area: hero;
+
+    background-color: var(--color-footer-hero);
+    padding: 5rem 2rem;
+    text-align: center;
+}
+.hero-section h1 {
+    color: rgb(221, 221, 221);
+    margin-bottom: 1.6rem;
+}
+.hero-section p {
+    color: #c6c6c6;
+    margin-bottom: 1rem;
+}
+.hero-section a {
+    display: inline-block;
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+
+    background-color: rgb(35, 171, 35);
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+}
+
+/* --------------------------- 
+/    Estilos para el main    
+/------------------------------------------------------------------- */
+main {
+    margin-top: 4.5rem;
+}
