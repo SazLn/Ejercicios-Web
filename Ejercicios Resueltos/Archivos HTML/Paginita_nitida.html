@@ -30,14 +30,14 @@
         
         <main>
             <article>
-                <figure class="contenedor-imagen">
-                    <img src="" alt="Vista previa del primer proyecto de layout con CSS Grid">
+                <figure class="contenedor-imagen"> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLelCLwAQfSVzRB9uxamLQ5INq_dEEL0FcLA&s" alt="Vista previa del primer proyecto de layout con CSS Grid">
                 </figure>
                 
                 <div class="contenido-articulo">
-                    <span>Diseño</span>
+                    <span class="etiqueta">Diseño</span>
 
-                    <h2>Layout con CSS Grid</h2>
+                    <h2>Layout con CSS Grid</h2> <!-- Agregarle un margin-bottom -->
                     <p>Explorando las capacidades de CSS Grid para crear estructuras complejas y adaptables, organizando el contenido de forma semántica y eficiente bidimensionalmente.</p>
                 </div>
 
@@ -48,11 +48,11 @@
 
             <article>
                 <figure class="contenedor-imagen">
-                    <img src="" alt="Ejemplo de diseño responsivo enfocado en mobile-first">
+                    <img src="https://iconecta.es/blog/wp-content/uploads/2019/04/post_mobile_first.png" alt="Ejemplo de diseño responsivo enfocado en mobile-first">
                 </figure>
 
                 <div class="contenido-articulo">
-                    <span>CSS</span>
+                    <span class="etiqueta">CSS</span>
 
                     <h2>Diseño Mobile-First</h2>
                     <p>Aplicando principios de diseño adaptativo empezando por dispositivos móviles y escalando hacia pantallas más grandes utilizando medias queries adecuadamente.</p>
@@ -65,11 +65,11 @@
 
             <article>
                 <figure class="contenedor-imagen">
-                    <img src="" alt="Demostración de animaciones y transiciones interactivas">
+                    <img src="https://desarrolloweb.com/storage/article_featured_images/qaLOL4ILjJYEGuXuhFrJzsU7lasAaDIY4eMDOnc2.jpeg" alt="Demostración de animaciones y transiciones interactivas">
                 </figure>
 
                 <div class="contenido-articulo">
-                    <span>Tipografía</span>
+                    <span class="etiqueta">Tipografía</span>
 
                     <h2>Animaciones y Accesibilidad</h2>
                     <p>Mejorando la experiencia de usuario a través de transiciones suaves, prestando atención al contraste tipográfico y la accesibilidad de los elementos interactivos.</p>
@@ -81,32 +81,37 @@
             </article>
         </main>
 
-        <!-- En mobile-first va por debajo de <main> -->
-        <aside>
-            <div class="contenido-aside">
-                <h3>Categorías</h3>
+        <div class="contenedor-aside">
 
-                <ul>
-                    <li><a href="#">Desarrollo Frontend</a></li>
-                    <li><a href="#">Diseño UI/UX</a></li>
-                    <li><a href="#">CSS y Animaciones</a></li>
-                    <li><a href="#">Accesibilidad Web</a></li>
-                    <li><a href="#">Rendimiento</a></li>
-                </ul>
-            </div>
+            <!-- En mobile-first va por debajo de <main> -->
+            <aside>
+                <div class="contenido-aside">
+                    <h3>Categorías</h3>
+            
+                    <ul>
+                        <li><a href="#">Desarrollo Frontend</a></li>
+                        <li><a href="#">Diseño UI/UX</a></li>
+                        <li><a href="#">CSS y Animaciones</a></li>
+                        <li><a href="#">Accesibilidad Web</a></li>
+                        <li><a href="#">Rendimiento</a></li>
+                    </ul>
+                </div>
+            
+                <div class="contenido-aside ">
+                    <h3>Etiquetas</h3>
+                    <div class="etiquetas"><span>HTML</span>
+                    <span>CSS</span><span>Grid</span>
+                    <span>Flexbox</span>
+                    <span>Diseño</span>
+                    <span>Web</span></div>
+                </div>
+            </aside>
 
-            <div class="contenido-aside">
-                <h3>Etiquetas</h3>
-                <span>HTML</span>
-                <span>CSS</span><span>Grid</span>
-                <span>Flexbox</span>
-                <span>Diseño</span>
-                <span>Web</span>
-            </div>
-        </aside> 
+        </div>
+        
 
         <footer>
-            <p>Retomando la programación web - con malas prácticas incluidas xd.</p>
+            <p><strong>Retomando la programación web</strong> - con malas prácticas incluidas xd.</p>
             <span>2026</span>
         </footer>
     </div>
