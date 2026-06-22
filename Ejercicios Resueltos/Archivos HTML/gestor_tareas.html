@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de tareas de prueba</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
+</head>
+<body class="h-screen">
+    <!-- Contenedor de tosa mnda -->
+    <div class="w-full h-full flex flex-col bg-[#111830] gap-[1.25rem] p-[1.5rem]">
+
+        <!-- Contenedor del título -->
+        <div class="text-white p-[0.625rem] flex flex-col justify-center items-center gap-[0.5rem]">
+
+            <h2 class="text-4xl font-bold">📋 Prueba de gestor de tareas cacorro</h2>
+            <p class="text-gray-300 italic">Gestionar tareas nunca fue tan gay</p>
+        </div>
+
+
+
+        <!-- Contenedor de la entrada de texto -->
+        <div class="flex flex-row justify-between gap-[0.5rem] p-[1.5rem] bg-[#1E2C57] rounded-xl">
+            <input type="text" id="entrada-texto" placeholder="Escribe una nueva tarea..."
+            class="p-[1rem] flex-1 rounded-lg bg-[#111830] text-white placeholder-gray-400 focus:ring-2 focus:ring-cyan-400 focus:outline-none"
+            >
+            <button class="bg-cyan-500 hover:bg-cyan-600 text-white px-[0.5rem] py-[0.5rem] rounded-lg w-24 cursor-pointer transition-colors">Añadir</button>
+        </div>
+
+
+
+        <!-- Contenedor para los campos de tareas pendientes y completadas. -->
+        <div class="flex-1 flex flex-col gap-[1rem] overflow-auto">
+
+            <!-- Contenedor de tareas pendientes -->
+            <div class="flex-1 bg-[#1E2C57] rounded-xl p-[1rem] flex flex-col gap-[0.5rem]" id="contenedor-tareas-pendiente">
+
+                <div class="flex flex-row gap-[1.25rem]">
+                    <h3 class="text-lg font-semibold text-cyan-300">⏳ Pendientes</h3>
+                    <span class="bg-white/10 text-cyan-200 p-[0.313rem] rounded-md text-sm font-medium text-center">0</span>
+                </div>
+
+                <div id="lista-pendientes" class="flex flex-col gap-[0.5rem] overflow-y-auto max-h-[18rem]">
+
+                </div>
+
+            </div>
+
+            <!-- Contenedor de tareas completadas -->
+            <div class="flex-1 bg-[#1E2C57] rounded-xl p-[1rem] flex flex-col gap-[0.5rem]">
+
+                <div class="flex flex-row gap-[1.25rem]">
+                    <h3 class="text-lg font-semibold text-emerald-300">✅ Completadas</h3>
+                    <span class="bg-white/10 text-emerald-200 p-[0.313rem] rounded-md text-sm font-medium text-center">0</span>
+                </div>
+                
+
+                <div id="lista-completadas" class="flex flex-col gap-[0.5rem] overflow-y-auto max-h-[18rem]"></div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../Archivos JS/gestor_tareas.js"></script>
+</body>
+</html>
