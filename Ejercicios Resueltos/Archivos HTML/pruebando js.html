@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor con contador de caracteres</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-[#f5f7fa] font-sans text-[#333] min-h-screen flex flex-col">
+    <header class="bg-gradient-to-r from-[#667eea] to-[#764ba2] text-white px-4 py-4 shadow-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between">
+            <div class="flex items-center gap-2 mb-2 sm:mb-0">
+                <span class="text-3xl">🚀</span>
+                <h1 class="text-xl font-semibold">Mis Proyectos</h1>
+            </div>
+            <nav>
+                <ul class="flex gap-4">
+                    <li><a href="#" class="px-4 py-2 rounded hover:bg-white/20 transition">Inicio</a></li>
+                    <li><a href="#" class="px-4 py-2 rounded hover:bg-white/20 transition">Proyectos</a></li>
+                    <li><a href="#" class="px-4 py-2 rounded hover:bg-white/20 transition">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="flex-1 max-w-6xl mx-auto w-full px-4 py-8">
+        <h2 class="text-2xl font-semibold mb-6">Editor de Texto</h2>
+
+        <div class="relative max-w-xl">
+            <textarea id="editor" placeholder="Escribe algo aquí..."
+                class="w-full h-48 p-[0.625rem] text-base border border-[#ccc] rounded-lg bg-white text-[#333] resize-y outline-none focus:border-[#667eea] focus:ring-3 focus:ring-[#667eea]/15 transition"></textarea>
+            <span id="contador" class="absolute bottom-3 right-3 text-sm text-[#999] bg-white/90 px-2 py-0.5 rounded pointer-events-none">0/500</span>
+        </div>
+    </main>
+
+    <footer class="bg-[#2c3e50] text-white text-center px-4 py-8">
+        <p class="mb-4">&copy; 2026 Santiago - Práctica con Tailwind CSS</p>
+        <div class="flex justify-center gap-4">
+            <a href="#" class="px-4 py-2 border border-white/30 rounded hover:bg-white/10 hover:border-white transition">GitHub</a>
+            <a href="#" class="px-4 py-2 border border-white/30 rounded hover:bg-white/10 hover:border-white transition">LinkedIn</a>
+            <a href="#" class="px-4 py-2 border border-white/30 rounded hover:bg-white/10 hover:border-white transition">Twitter</a>
+        </div>
+    </footer>
+
+    <!-- Vincular con el JS -->
+    <script src="../Archivos JS/pruebadojs.js"></script>
+</body>
+</html>
