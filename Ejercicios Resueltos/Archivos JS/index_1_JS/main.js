@@ -41,7 +41,7 @@ quickCities.addEventListener('click' ,(e) => {
 });
 
 
-//TODO: Anadir el evento para cuando el usuario escribe la ciudad que quiere consultar en el <input>.
+
 
 //Funcion auxiliar 
 const buscarCiudad = (inputNombre) => {
@@ -60,7 +60,6 @@ const buscarCiudad = (inputNombre) => {
                 idciudad = idCiudad;
 
                 nombreHallado = true;
-                //TODO: anadir bandera para saber si se encontro el nombre.
                 break;
             } 
         }
